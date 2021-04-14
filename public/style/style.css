@@ -26,6 +26,11 @@ section {
     margin: 40px auto;
 }
 
+#title {
+    width: 50%;
+    color: red;
+}
+
 form {
     display: flex;
     flex-direction: column;

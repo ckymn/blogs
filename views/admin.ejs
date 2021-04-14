@@ -2,16 +2,24 @@
 <html lang="en">
 <head>
     <%-include("./partials/header.ejs") %> 
+    <style>
+        #add{
+            display: inline-block;
+            width: 70px;
+            height: 21px;
+        }
+    </style>
 </head>
 <body>
     <%-include("./partials/nav.ejs") %> 
     <section >
-        <h1>ALL PROJECTS <small><a href="/admin/add">Proje Ekle</a></small></h1>
+        <h1 id="title">ALL PROJECTS </h1>
+        <button><a id="add" style="color: blue;" href="/admin/add">Proje Ekle</a></button>
         <ul>
             <% blogs.map((el,i,arr) => { %> 
                 <br>
                     <p><%=el.title%></p>
-                    <a class="del" style="color: red;" data-id="<%=el._id%> ">Yazi Sil</a>
+                    <button><a class="del" style="color: red;" data-id="<%=el._id%> ">Yazi Sil</a></button>
                 </li>
             <%  })%> 
         </ul>
