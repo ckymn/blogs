@@ -5,11 +5,24 @@
     <%-include("./partials/nav.ejs") %>
     <section>
         <form action="/admin/add" method="post">
-            <input type="text" name="title" placeholder="Baslik" required>
-            <input type="text" name="short" placeholder="Kisa Aciklama" required>
-            <input type="text" name="long" placeholder="Uzun Aciklama" required>
-            <input type="submit" value="Kaydet">
+            <lable for="title">Project Name</lable><br/>
+            <input type="text" id="title" name="title" placeholder="Project Name" required>
+            <lable for="short">Project Short Info</lable><br/>
+            <input type="text" id="short" name="short" placeholder="Short Info" required>
+            <lable for="message">Project Long Info</lable><br/>
+            <textarea id="message" name="long" rows="5" cols="100" placeholder="long info"></textarea>
+            <lable for="url">Project Link</lable><br/>
+            <input type="url" id="url" name="link" placeholder="Project Link" required>
+            <lable for="site">Where is it</lable><br/> 
+            <select name="site" id="site">
+                <option value="github" selected>Github</option>
+                <option value="gitlab">GitLab</option>
+                <option value="bitbucket">Bitbucket</option>
+            </select>
+            <button type="submit">Reset</button>
+            <button type="submit">Save</button>
         </form>
     </section> 
+     <%-include("./partials/footer.ejs") %>
 </body>
 </html>

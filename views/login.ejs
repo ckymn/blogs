@@ -5,10 +5,14 @@
     <%-include("./partials/nav.ejs") %>
     <section>
         <form action="" method="post">
-            <input type="text" name="username" placeholder="kullanici adi" required>
-            <input type="passwor" name="password" placeholder="parola" required>
-            <input type="submit" value="Gonder">
+            <lable for="name">User Name</lable><br />
+            <input type="text" id="name" name="username" placeholder="kullanici adi" required>
+            <lable for="password"> Password</lable><br />
+            <input type="password" id="password" name="password" placeholder="parola" required>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
         </form>
     </section> 
+     <%-include("./partials/header.ejs") %>
 </body>
 </html>
