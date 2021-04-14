@@ -5,10 +5,16 @@
     <%-include("./partials/nav.ejs") %>
     <section>
         <form action="/admin/add" method="post">
-            <input type="text" name="title" placeholder="Baslik" required>
-            <input type="text" name="short" placeholder="Kisa Aciklama" required>
-            <input type="text" name="long" placeholder="Uzun Aciklama" required>
-            <input type="submit" value="Kaydet">
+            <lable for="name">Project Name</lable><br/>
+            <input type="text" id="name" name="title" placeholder="Project Name" required>
+            <lable for="name">Project Short Info</lable><br/>
+            <input type="text" id="name" name="short" placeholder="Short Info" required>
+            <lable for="name">Project Long Info</lable><br/>
+            <input type="text" id="name" name="long" placeholder="Long Info" required>
+            <lable for="name">Project Link</lable><br/>
+            <input type="url" id="name" name="link" placeholder="Project Link" required>
+            <button type="submit">Reset</button>
+            <button type="submit">Save</button>
         </form>
     </section> 
 </body>
