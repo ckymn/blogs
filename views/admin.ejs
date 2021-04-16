@@ -13,7 +13,7 @@
 <body>
     <%-include("./partials/nav.ejs") %> 
     <section >
-        <h1 id="title">ALL PROJECTS </h1>
+        <h1 class="text-center" id="title">ALL PROJECTS </h1>
         <button><a id="add" style="color: blue;" href="/admin/add">Proje Ekle</a></button>
         <ul>
             <% blogs.map((el,i,arr) => { %> 
@@ -47,5 +47,6 @@
             })
         })
     </script>
+    <%-include("./partials/footer.ejs") %>
 </body>
 </html>

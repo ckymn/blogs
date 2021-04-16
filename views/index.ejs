@@ -5,20 +5,37 @@
 </head>
 <body>
     <%-include("./partials/nav.ejs") %> 
-    <section>
-        <h1 id="title">Yazilar</h1>
-        <ul>
-            <% blogs.map((el,i,arr) => { %> 
-                <br>
-                    <a href="/blog/<%=el._id%>"><%=el.title%></a>
-                    <p><%=el.short%></p>
-                    <p><%=el.long%></p>
-                    <time><%=el.createdAt%> </time>
-                    <time><%=el.updatedAt%> </time>
-                </li>
-            <%  })%> 
-        </ul>
-    </section>
-     <%-include("./partials/footer.ejs") %>
+    <h1 class="text-center" id="title">SITE PROJECTS</h1>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 g-lg-5">
+        <% blogs.map((el,i,arr) => { %> 
+            <div class="col" id="card">
+                <div class="col-3" id="link-site">
+                    <a href= <%=el.g_link%> ><ion-icon name="logo-github"></ion-icon></a>
+                    <a href= <%=el.s_link%> ><ion-icon name="logo-web-component"></ion-icon></a>
+                    <a href= <%=el.t_link%> ><ion-icon name="logo-twitter"></ion-icon></a>
+                </div>    
+                <div class="card h-100">
+                    <div class="card-body">
+                    <h5 class="card-title">
+                        <a class="btn btn-outline-primary" href="/blog/<%=el._id%>"><%=el.title%></a>
+                    </h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><%=el.long%></li>
+                        <li class="list-group-item"><%=el.short%></li>
+                    </ul>
+                    </div>
+                    <div class="card-footer">
+                    <small class="text-muted"><%=el.createdAt%></small>
+                    <small class="text-muted"><%=el.updatedAt%></small>
+                    </div>
+                </div>
+            </div>
+            
+        <%  })%> 
+    </div>
+</div>
+    <%-include("./partials/footer.ejs") %> 
 </body>
 </html>
+

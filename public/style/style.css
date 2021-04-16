@@ -1,14 +1,16 @@
+*{
+    color: white;
+}
+
 body { 
-    background-color: aqua;
+    background-color: #0E182A
 }
 
 .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border-bottom: 3px solid #000;
-    border-style: dotted;
-    border-color: blueviolet;
+    border-bottom: 1px solid white;
 }
 
 nav ul {
@@ -21,31 +23,6 @@ nav ul li {
     margin-right: 30px;
 }
 
-section {
-    max-width: 800px;
-    margin: 40px auto;
-}
-
-#title {
-    width: 50%;
-    color: red;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    margin: 40px auto;    
-}
-
-form input {
-    margin-top: 10px;
-    padding: 5px 10px;
-}
-
-a{
-    color: black;
-}
 
 /*yazilari secme isleminde olusacak renk */
 a::selection{
@@ -55,4 +32,22 @@ a::selection{
 ::selection{
     color: black;
     background: yellow;
+}
+
+h1 {
+    color: white;
+    margin-top: 1rem;
+}
+
+#link-site{
+    margin: auto ;
+}
+
+ion-icon {
+    font-size: 20px;
+    color: rgb(15, 80, 111);
+}
+
+.row{
+    margin: 0 20px;
 }

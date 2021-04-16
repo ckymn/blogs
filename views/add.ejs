@@ -5,20 +5,24 @@
     <%-include("./partials/nav.ejs") %>
     <section>
         <form action="/admin/add" method="post">
-            <lable for="title">Project Name</lable><br/>
+            <lable for="title" >Project Name</lable>
             <input type="text" id="title" name="title" placeholder="Project Name" required>
-            <lable for="short">Project Short Info</lable><br/>
+            <lable for="short">Project Short Info</lable>
             <input type="text" id="short" name="short" placeholder="Short Info" required>
-            <lable for="message">Project Long Info</lable><br/>
+            <lable for="message">Project Long Info</lable>
             <textarea id="message" name="long" rows="5" cols="100" placeholder="long info"></textarea>
-            <lable for="url">Project Link</lable><br/>
-            <input type="url" id="url" name="link" placeholder="Project Link" required>
-            <lable for="site">Where is it</lable><br/> 
+            <lable for="url">Github Link</lable>
+            <input type="url" id="url" name="g_link" placeholder="github Link" required>
+            <lable for="url">Website/Demo Link</lable>
+            <input type="url" id="url" name="s_link" placeholder="website Link" required>
+            <lable for="url">Twitter Link</lable>
+            <input type="url" id="url" name="t_link" placeholder="twitter Link" required>
+            <lable for="site">Where is it</lable> 
             <select name="site" id="site">
                 <option value="github" selected>Github</option>
                 <option value="gitlab">GitLab</option>
                 <option value="bitbucket">Bitbucket</option>
-            </select>
+            </select><br/>
             <button type="submit">Reset</button>
             <button type="submit">Save</button>
         </form>
