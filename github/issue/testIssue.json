@@ -1,0 +1,14 @@
+[
+    {
+        "title": "code fixed",
+        "labels": [
+            "question"
+        ]
+    },
+    {
+        "title": "Bug",
+        "labels": [
+            "bug"
+        ]
+    }
+]

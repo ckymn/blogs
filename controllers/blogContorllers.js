@@ -7,7 +7,12 @@ const blog_single =  async (req,res) =>{
   
     try {
       let result = await Blog.findById(id);
-      res.render("blog",{title:"Detay", blogs:result});
+
+      const url = `https://api.github.com/users/${result.github_username}/repos`;
+      const response = await fetch(url);
+      const api = await response.json();
+        
+      res.render("blog",{title:"Detay", blogs:result , github:api});
     } catch (error) {
       res.status(404).render("404",{title: "Fault Page"})
     }
