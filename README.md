@@ -19,3 +19,4 @@ with MVC created
           margin: 10px;
         }
     `
+    -pagination degerleri eklenebilir..
